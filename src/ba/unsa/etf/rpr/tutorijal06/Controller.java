@@ -51,7 +51,7 @@ public class Controller {
             return "Gdje ces sa 0 dijelit";
         }
         try {
-            expression = expression.replaceAll("x", "*"); // Replace 'x' with '*' for multiplication
+            expression = expression.replaceAll("x", "*");
             Object result = engine.eval(expression);
             return result.toString();
         } catch (ScriptException e) {
