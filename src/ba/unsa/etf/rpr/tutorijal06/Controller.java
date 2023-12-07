@@ -3,22 +3,35 @@ package ba.unsa.etf.rpr.tutorijal06;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 public class Controller {
 
     @FXML
     private TextField display;
 
-    private double data = 0.0;
-    private String operator = "";
-    private boolean start = true;
+    private final ScriptEngine engine;
+
+    public Controller() {
+        ScriptEngineManager sem = new ScriptEngineManager();
+        this.engine = sem.getEngineByName("JavaScript");
+    }
 
     @FXML
     private void onNumberClicked(javafx.event.ActionEvent event) {
-        if (start) {
-            display.setText("");
-            start = false;
-        }
+        String value = ((Button) event.getSource()).getText();
+        display.setText(display.getText() + value);
+    }
+
+    @FXML
+    private void clearDisplay() {
+        display.setText("");
+    }
+
+    @FXML
+    private void onBracketClicked(javafx.event.ActionEvent event) {
         String value = ((Button) event.getSource()).getText();
         display.setText(display.getText() + value);
     }
@@ -27,32 +40,22 @@ public class Controller {
     private void onOperatorClicked(javafx.event.ActionEvent event) {
         String value = ((Button) event.getSource()).getText();
         if (!"=".equals(value)) {
-            if (!operator.isEmpty()) return;
-            operator = value;
-            data = Double.parseDouble(display.getText());
-            display.setText("");
+            display.setText(display.getText() + value);
         } else {
-            if (operator.isEmpty()) return;
-            display.setText(String.format("%.2f", calculate(data, Double.parseDouble(display.getText()), operator)));
-            operator = "";
-            start = true;
+            display.setText(evaluateExpression(display.getText()));
         }
     }
 
-    private double calculate(double a, double b, String operator) {
-        switch (operator) {
-            case "+":
-                return a + b;
-            case "-":
-                return a - b;
-            case "x":
-                return a * b;
-            case "/":
-                if (b == 0) return 0;
-                return a / b;
-            case "%":
-                return a % b;
+    private String evaluateExpression(String expression) {
+        if (expression.contains("/0")) {
+            return "Gdje ces sa 0 dijelit";
         }
-        return 0;
+        try {
+            expression = expression.replaceAll("x", "*"); // Replace 'x' with '*' for multiplication
+            Object result = engine.eval(expression);
+            return result.toString();
+        } catch (ScriptException e) {
+            return "Error";
+        }
     }
 }
