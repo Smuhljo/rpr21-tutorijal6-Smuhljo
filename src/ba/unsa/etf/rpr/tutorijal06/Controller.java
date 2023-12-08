@@ -33,16 +33,34 @@ public class Controller {
     @FXML
     private void onBracketClicked(javafx.event.ActionEvent event) {
         String value = ((Button) event.getSource()).getText();
-        display.setText(display.getText() + value);
+        String currentDisplay = display.getText();
+
+        if (value.equals("(")) {
+            // Allow '(' if display is empty or ends with an operator or another '('
+            if (currentDisplay.isEmpty() || isOperator(currentDisplay.charAt(currentDisplay.length() - 1)) || currentDisplay.endsWith("(")) {
+                display.setText(currentDisplay + value);
+            }
+        } else if (value.equals(")")) {
+            // Allow ')' if there are unmatched '(' and display does not end with an operator
+            if (hasUnmatchedOpeningBracket(currentDisplay) && !isOperator(currentDisplay.charAt(currentDisplay.length() - 1))) {
+                display.setText(currentDisplay + value);
+            }
+        }
     }
 
     @FXML
     private void onOperatorClicked(javafx.event.ActionEvent event) {
         String value = ((Button) event.getSource()).getText();
+        String currentDisplay = display.getText();
+
         if (!"=".equals(value)) {
-            display.setText(display.getText() + value);
+            // Prevent adding an operator if display is empty or ends with an operator
+            if (currentDisplay.isEmpty() || isOperator(currentDisplay.charAt(currentDisplay.length() - 1))) {
+                return;
+            }
+            display.setText(currentDisplay + value);
         } else {
-            display.setText(evaluateExpression(display.getText()));
+            display.setText(evaluateExpression(currentDisplay));
         }
     }
 
@@ -57,5 +75,18 @@ public class Controller {
         } catch (ScriptException e) {
             return "Error";
         }
+    }
+
+    private boolean isOperator(char c) {
+        return c == '+' || c == '-' || c == 'x' || c == '/';
+    }
+
+    private boolean hasUnmatchedOpeningBracket(String str) {
+        int count = 0;
+        for (char c : str.toCharArray()) {
+            if (c == '(') count++;
+            if (c == ')') count--;
+        }
+        return count > 0; // true if there are unmatched '('
     }
 }
