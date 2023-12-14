@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bd662424-5e64-492e-84a1-9be571d102f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/digitron.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/digitron.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/fxml/digitron.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fxml/digitron.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +35,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lv7-z1&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Muhak/rpr21-tutorijal6-Smuhljo&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -56,7 +61,9 @@
       <workItem from="1701963366926" duration="1027000" />
       <workItem from="1701966487556" duration="1747000" />
       <workItem from="1701978071651" duration="1802000" />
-      <workItem from="1702056960362" duration="610000" />
+      <workItem from="1702056960362" duration="930000" />
+      <workItem from="1702559633483" duration="643000" />
+      <workItem from="1702564250541" duration="485000" />
     </task>
     <servers />
   </component>
