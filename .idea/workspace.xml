@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd662424-5e64-492e-84a1-9be571d102f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/fxml/digitron.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/digitron.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/t7z1/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/t7z1/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +57,7 @@
       <workItem from="1701978071651" duration="1802000" />
       <workItem from="1702056960362" duration="930000" />
       <workItem from="1702559633483" duration="643000" />
-      <workItem from="1702564250541" duration="485000" />
+      <workItem from="1702564250541" duration="806000" />
     </task>
     <servers />
   </component>

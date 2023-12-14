@@ -22,6 +22,8 @@ public class HelloApplication extends Application {
         primaryStage.setMinHeight(350);
         primaryStage.setMinWidth(530);
         primaryStage.show();
+        //komm
+
     }
 
     public static void main(String[] args) {
